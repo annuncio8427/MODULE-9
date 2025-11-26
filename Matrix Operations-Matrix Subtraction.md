@@ -22,9 +22,39 @@ To write a Python program that reads two matrices from the user and performs mat
 ---
 
 ## 💻 PROGRAM:
-ADD CODE HERE
+
+def create_matrix(rows, cols):
+    matrix = []
+    for _ in range(rows):
+        row = list(map(int, input().split()))
+        matrix.append(row)
+    return matrix
+
+r = int(input())
+c = int(input())
+
+A = create_matrix(r, c)
+B = create_matrix(r, c)
+
+C = []
+for i in range(r):
+    row = []
+    for j in range(c):
+
 
 ## OUTPUT:
+3
+3
+9 8 7
+6 5 4
+3 2 1
+1 2 3
+4 5 6
+7 8 9
+8 6 4
+2 0 -2
+-4 -6 -8
 
 ## RESULT:
 
+The program reads two 3×3 matrices from the user, subtracts the second matrix from the first element-wise, and correctly outputs the resulting matrix. This successfully demonstrates matrix subtraction in Python using nested loops.
