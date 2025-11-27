@@ -19,9 +19,9 @@ To write a Python program that prints only the diagonal elements of a given matr
 
 ## 🖥️ Program
 
+```python
 rows = int(input())
 cols = int(input())
-
 matrix = []
 for _ in range(rows):
     row = list(map(int, input().split()))
@@ -35,12 +35,13 @@ for i in range(rows):
         if i == j:
             print(matrix[i][j], end=' ')
         else:
-            print('  ', end=' ')
+            print(' ', end=' ')
     print()
+```
 
+## Output:
 
-### Output:
-
+```
 Enter number of rows: 3
 Enter number of columns: 3
 Enter the elements row-wise:
@@ -54,26 +55,7 @@ Full Matrix:
 7 8 9
 
 Diagonal Elements Matrix:
-1      
-    5   
-       9 
-
-## Result
-
-The program successfully reads a 3×3 matrix from the user and displays:
-
-The full matrix as entered:
-
-1 2 3
-4 5 6
-7 8 9
-
-
-Only the diagonal elements of the matrix, leaving other positions blank to maintain the matrix shape:
-
-1      
-  5    
-    9  
-
-
-This output clearly highlights the main diagonal elements of the matrix, fulfilling the program’s aim. The spaces ensure that the diagonal elements stay aligned with their original positions.
+1    
+  5  
+    9
+```
