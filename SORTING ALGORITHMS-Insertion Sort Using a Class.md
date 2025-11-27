@@ -35,17 +35,18 @@ To develop a Python class with functions to:
 
 ## 💻 PROGRAM:
 
+```python
 class InsertionSorter:
     def __init__(self):
         self.data = []
-
+    
     def create_list(self):
         n = int(input())
         self.data = list(map(int, input().split()))
         if len(self.data) != n:
             print(f"Error: Expected {n} elements but got {len(self.data)}.")
             exit(1)
-
+    
     def insertion_sort(self):
         for i in range(1, len(self.data)):
             key = self.data[i]
@@ -54,25 +55,28 @@ class InsertionSorter:
                 self.data[j + 1] = self.data[j]
                 j -= 1
             self.data[j + 1] = key
-
+    
     def print_list(self):
-        print(*self.data)
+        print(self.data)
 
+# Main Program
 sorter = InsertionSorter()
-
 sorter.create_list()
 sorter.insertion_sort()
 sorter.print_list()
-
+```
 
 ## OUTPUT:
 
+```
+Input:
 5
-12 11 13 5 6
-5 6 11 12 13
+64 34 25 12 22
+
+Output:
+[12, 22, 25, 34, 64]
+```
 
 ## RESULT:
 
-RESULT:
-
-The program reads a list of integers, sorts them using the insertion sort algorithm implemented inside a class, and prints the sorted list correctly. It successfully demonstrates class usage and the insertion sort logic.
+The program successfully creates a class-based implementation of the Insertion Sort algorithm. It accepts a list from the user, sorts it in ascending order using the insertion sort technique, and displays the sorted result. This demonstrates proper use of object-oriented programming principles in implementing sorting algorithms.
